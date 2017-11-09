@@ -24,7 +24,5 @@ include(arch)
 # process src/CMakeLists.txt
 add_subdirectory(src)
 
-# process test/CMakeLists.txt
-add_subdirectory(test)
-
+include(test)
 include(packaging)

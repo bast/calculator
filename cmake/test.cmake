@@ -14,8 +14,8 @@ if(ENABLE_UNIT_TESTS)
 
     add_executable(
         unit_tests
-        main.cpp
-        calculator.cpp
+        test/main.cpp
+        test/calculator.cpp
         )
 
     target_link_libraries(
