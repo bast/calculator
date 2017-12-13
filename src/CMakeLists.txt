@@ -13,6 +13,7 @@ add_executable(
 
 target_link_libraries(
     calculator.x
+    PRIVATE
     calculator
     )
 
