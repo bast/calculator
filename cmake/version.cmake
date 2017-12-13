@@ -7,7 +7,7 @@ set(VERSION_PATCH 0)
 set(GIT_HASH "unknown")
 
 # find Git and if available set GIT_HASH variable
-find_package(Git)
+find_package(Git QUIET)
 if(GIT_FOUND)
     execute_process(
         COMMAND ${GIT_EXECUTABLE} --no-pager show -s --pretty=format:%h -n 1
@@ -19,7 +19,7 @@ endif()
 
 # generate file version.h based on version.h.in
 configure_file(
-    ${PROJECT_SOURCE_DIR}/cmake/version.h.in
-    ${PROJECT_BINARY_DIR}/generated/version.h
+    cmake/version.h.in
+    generated/version.h
     @ONLY
     )
