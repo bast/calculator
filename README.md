@@ -5,7 +5,7 @@
 
 Exercise to practice building projects with [CMake](https://cmake.org).
 
-The source code and unit tests are there:
+The source code and unit tests are organized as follows:
 
 ```
 .
