@@ -1,3 +1,3 @@
-set(CPACK_PACKAGE_CONTACT "Slim Shady")
+set(CPACK_PACKAGE_CONTACT "Bruce Wayne")
 
 include(CPack)
