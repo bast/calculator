@@ -8,17 +8,11 @@ project(calculator CXX Fortran)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 
-# tell CMake where to find *.cmake module files
-set(CMAKE_MODULE_PATH
-    ${CMAKE_MODULE_PATH}
-    ${PROJECT_SOURCE_DIR}/cmake
-    )
-
-include(version)
-include(arch)
+include(cmake/version.cmake)
+include(cmake/arch.cmake)
 
 # process src/CMakeLists.txt
 add_subdirectory(src)
 
-include(test)
-include(packaging)
+include(cmake/test.cmake)
+include(cmake/packaging.cmake)
