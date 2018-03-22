@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 3.0 FATAL_ERROR)
 
 # project name and supported languages
-project(calculator CXX Fortran)
+project(calculator LANGUAGES CXX Fortran)
 
 # specify where to place binaries and libraries
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
