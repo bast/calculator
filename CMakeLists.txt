@@ -10,8 +10,10 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/${CMAKE_INSTALL_LIBDIR}
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/${CMAKE_INSTALL_LIBDIR})
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/${CMAKE_INSTALL_BINDIR})
 
-include(cmake/version.cmake)
+# contains a workaround for Mac OS X
 include(cmake/arch.cmake)
+
+include(cmake/version.cmake)
 
 # process src/CMakeLists.txt
 add_subdirectory(src)
