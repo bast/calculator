@@ -24,8 +24,8 @@ if(ENABLE_UNIT_TESTS)
 
     add_executable(
         unit_tests
-        test/main.cpp
-        test/calculator.cpp
+        main.cpp
+        calculator.cpp
         )
 
     target_include_directories(
@@ -46,5 +46,5 @@ if(ENABLE_UNIT_TESTS)
     add_dependencies(unit_tests gtest)
 
     enable_testing()
-    add_test(unit ${PROJECT_BINARY_DIR}/bin/unit_tests)
+    add_test(unit ${PROJECT_BINARY_DIR}/${CMAKE_INSTALL_BINDIR}/unit_tests)
 endif()

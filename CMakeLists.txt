@@ -6,9 +6,9 @@ project(calculator LANGUAGES CXX Fortran)
 
 # specify where to place binaries and libraries
 include(GNUInstallDirs)
-set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/${CMAKE_INSTALL_LIBDIR})
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/${CMAKE_INSTALL_LIBDIR})
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/${CMAKE_INSTALL_BINDIR})
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/${CMAKE_INSTALL_LIBDIR})
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/${CMAKE_INSTALL_LIBDIR})
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/${CMAKE_INSTALL_BINDIR})
 
 include(cmake/version.cmake)
 include(cmake/arch.cmake)
@@ -16,5 +16,10 @@ include(cmake/arch.cmake)
 # process src/CMakeLists.txt
 add_subdirectory(src)
 
-include(cmake/test.cmake)
+# enable testing
+enable_testing()
+
+# process test/CMakeLists.txt
+add_subdirectory(test)
+
 include(cmake/packaging.cmake)
