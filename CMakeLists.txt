@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 3.0 FATAL_ERROR)
 
 # project name and supported languages
-project(calculator LANGUAGES CXX Fortran)
+project(calculator VERSION 1.0.0 LANGUAGES CXX Fortran)
 
 # specify where to place binaries and libraries
 include(GNUInstallDirs)

@@ -1,8 +1,3 @@
-# version of our project
-set(VERSION_MAJOR 1)
-set(VERSION_MINOR 0)
-set(VERSION_PATCH 0)
-
 # in case Git is not available, we default to "unknown"
 set(GIT_HASH "unknown")
 
