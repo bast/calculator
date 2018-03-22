@@ -21,7 +21,7 @@ endif()
 
 # generate file version.h based on version.h.in
 configure_file(
-    cmake/version.h.in
+    ${CMAKE_CURRENT_LIST_DIR}/version.h.in
     generated/version.h
     @ONLY
     )
