@@ -13,6 +13,8 @@ if(GIT_FOUND)
         COMMAND ${GIT_EXECUTABLE} --no-pager show -s --pretty=format:%h -n 1
         OUTPUT_VARIABLE GIT_HASH
         OUTPUT_STRIP_TRAILING_WHITESPACE
+        WORKING_DIRECTORY
+            ${PROJECT_SOURCE_DIR}
         ERROR_QUIET
         )
 endif()
