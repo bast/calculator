@@ -14,6 +14,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/${CMAKE_INSTALL_BINDIR}
 include(cmake/arch.cmake)
 
 include(cmake/version.cmake)
+generate_version_h()
 
 # process src/CMakeLists.txt
 add_subdirectory(src)
