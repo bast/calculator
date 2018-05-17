@@ -27,6 +27,5 @@ if(ENABLE_UNIT_TESTS)
       gtest_main
     )
 
-  enable_testing()
   add_test(unit ${PROJECT_BINARY_DIR}/${CMAKE_INSTALL_BINDIR}/unit_tests)
 endif()
