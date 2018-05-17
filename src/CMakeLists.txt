@@ -6,6 +6,12 @@ add_library(
     calculator.h
     )
 
+target_include_directories(
+    calculator
+    PUBLIC
+    ${CMAKE_CURRENT_LIST_DIR}
+    )
+
 add_executable(
     calculator.x
     main.cpp
