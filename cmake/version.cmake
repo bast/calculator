@@ -1,4 +1,4 @@
-macro(generate_version_h)
+function(generate_version_h)
     # in case Git is not available, we default to "unknown"
     set(GIT_HASH "unknown")
 
@@ -21,4 +21,4 @@ macro(generate_version_h)
         generated/version.h
         @ONLY
         )
-endmacro()
+endfunction()
