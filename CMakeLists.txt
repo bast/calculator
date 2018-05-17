@@ -31,4 +31,5 @@ enable_testing()
 # process test/CMakeLists.txt
 add_subdirectory(test)
 
+# contains cpack code
 include(cmake/packaging.cmake)
