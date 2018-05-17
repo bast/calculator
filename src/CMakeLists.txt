@@ -1,9 +1,12 @@
-add_library(
+add_library(calculator SHARED "")
+
+target_sources(
   calculator
-  SHARED
+  PRIVATE
     add.f90
     subtract.f90
-    calculator.h
+  PUBLIC
+    ${CMAKE_CURRENT_LIST_DIR}/calculator.h
   )
 
 target_include_directories(
@@ -12,9 +15,12 @@ target_include_directories(
     ${CMAKE_CURRENT_LIST_DIR}
   )
 
-add_executable(
+add_executable(calculator.x "")
+
+target_sources(
   calculator.x
-  main.cpp
+  PRIVATE
+    main.cpp
   )
 
 target_link_libraries(
