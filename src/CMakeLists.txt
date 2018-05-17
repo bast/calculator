@@ -1,15 +1,15 @@
 add_library(
   calculator
   SHARED
-  add.f90
-  subtract.f90
-  calculator.h
+    add.f90
+    subtract.f90
+    calculator.h
   )
 
 target_include_directories(
   calculator
   PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}
+    ${CMAKE_CURRENT_LIST_DIR}
   )
 
 add_executable(
@@ -20,13 +20,13 @@ add_executable(
 target_link_libraries(
   calculator.x
   PRIVATE
-  calculator
+    calculator
   )
 
 target_include_directories(
   calculator.x
   PRIVATE
-  ${PROJECT_BINARY_DIR}/generated
+    ${PROJECT_BINARY_DIR}/generated
   )
 
 install(
